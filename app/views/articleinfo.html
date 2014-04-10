@@ -1,0 +1,34 @@
+
+<div class="articleViewContainer">
+<div  ng-controller="articleInfoCtrl" align="center">
+        <form class="col-lg-5 articleInfoLeft jumbotron">
+            <h3> Enter Article Info</h3>
+        <ul> <input type="text" class="form-control" name="url" ng-model="article.url" ng-blur="autoComplete()" placeholder="url"> <span ng-show="loadingArticle">loading...</span></ul>
+        <ul><input type="text" class="form-control" name="headline" ng-model="article.headline" placeholder="headline"> </ul>
+        <ul><input type="text" class="form-control" name="outlet" ng-model="article.outlet" placeholder="outlet"></ul>
+        <ul><input type="text" class="form-control" name="author" ng-model="article.author" placeholder="author"></ul>
+        <ul><input type="text" class="form-control" name="date" ng-model="article.date" placeholder="date"> </ul>
+        <ul><input type="text" class="form-control" name="article text" ng-model="article.text" placeholder="article text"></ul>
+        <ul><input type="text" class="form-control" name="circulation" ng-model="article.circ" placeholder="circulation"></ul>
+          <button id="enterButton" ng-click="clickedEnter()" > Enter </button>
+        </form>
+    </div>
+          <div class="col-lg-5 jumbotron articleInfoRight">
+          <h3>Article List</h3> 
+             <button id="viewReportButton" ng-click="clickedViewReport()" > View Report </button>
+                <div class="article" ng-repeat="article in articleList">
+                       <h2>{{article.headline}}</h2>
+                       <p>{{article.outlet}} </p>
+                </div>
+        </div>
+    </div>
+   
+ 
+
+<!--  url: $scope.url,
+                headline: $scope.headline,
+                outlet: $scope.outlet,
+                author: $scope.author,
+                date: $scope.date,
+                text: $scope.text,
+                circ: $scope.circ -->

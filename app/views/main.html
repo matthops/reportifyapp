@@ -1,0 +1,26 @@
+
+
+<div ng-controller="ReportsCtrl">
+	<div>
+		<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+  <form class="form-inline centerForm jumbotronPadding" role="form">
+	    <div class="form-group">
+	     	<input type="text" name="Report_Name" ng-model="name" class="form-control" placeholder="Report Name">
+	  	</div>
+	  	<div class="form-group">
+		 	<input type="text" class="form-control" name="client" ng-model="client" placeholder="Client">
+		 </div>
+		        	<!-- <input type="text" name="client" ng-model="client" class="form-control" placeholder="Client"> -->
+		<div class="row">
+			<div class="btn-group-lg">
+         		<button type="button" class="btn btn-default btn-md mainPage" id="enterButton" ng-click="reportClick()" >create a report </button>
+     		</div>
+         </div>
+	</form>
+		
+
+	</div>
+</div>
+
+
+<!-- report controller -->

@@ -1,0 +1,8 @@
+<p class="jumbotron"> This is the {{report.name}} for {{report.client}} </p>
+ 		<div ng-repeat="article in articles" class="jumbotron">
+          <h1>{{article.headline}} </h1>
+          <p>{{article.url}}</p>
+          <h5>{{article.outlet}}</h5>
+          <h5>{{article.author}}</h5>
+          <p > {{article.text}}</p>
+        </div>
